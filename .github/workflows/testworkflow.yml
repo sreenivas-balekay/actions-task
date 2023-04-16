@@ -14,31 +14,31 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm test
-  # lint:
-  #   runs-on: windows-latest
-  #   steps:
-  #     - name: Get code
-  #       uses: actions/checkout@v3
-  #     - name: Install Nodejs
-  #       uses: actions/setup-node@v3
-  #       with: 
-  #         node-version: 16 
-  #     - name: Install dependencies
-  #       uses: npm ci
-  #     - name: lint check
-  #       uses: npm lint
-  #  build:
-  #   runs-on: windows-latest
-  #   steps:
-  #     - name: Get code
-  #       uses: actions/checkout@v3
-  #     - name: Install Nodejs
-  #       uses: actions/setup-node@v3
-  #       with: 
-  #         node-version: 16
-  #     - name: Install dependencies
-  #       uses: npm ci
-  #     - name: Build project
-  #       run: npm run build
-  #     - name: deploy
-  #       echo: "Deploying to s3 .."
+  lint:
+    runs-on: windows-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install Nodejs
+        uses: actions/setup-node@v3
+        with: 
+          node-version: 16 
+      - name: Install dependencies
+        run: npm ci
+      - name: lint check
+        run: npm lint
+   build:
+    runs-on: windows-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install Nodejs
+        uses: actions/setup-node@v3
+        with: 
+          node-version: 16
+      - name: Install dependencies
+        run: npm ci
+      - name: Build project
+        run: npm run build
+      - name: deploy
+        echo: "Deploying to s3 .."
