@@ -1,5 +1,5 @@
-name: workflow01
-on: [push, deployment]
+name: Test project
+on: [push, workflow_dispatch]
 jobs: 
   test:
     runs-on: windows-latest
