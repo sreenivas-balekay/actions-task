@@ -41,4 +41,4 @@ jobs:
       - name: Build project
         run: npm run build
       - name: deploy
-        echo: "Deploying to s3 .."
+        run: echo "Deploying...."
