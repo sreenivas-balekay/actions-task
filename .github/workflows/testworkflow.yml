@@ -27,7 +27,7 @@ jobs:
         run: npm ci
       - name: lint check
         run: npm lint
-   build:
+  build:
     runs-on: windows-latest
     steps:
       - name: Get code
