@@ -1,6 +1,5 @@
 name: Test Project
 on: [push, workflow_dispatch]
-  branches: main
 jobs: 
   test:
     runs-on: windows-latest
